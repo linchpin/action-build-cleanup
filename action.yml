@@ -1,0 +1,20 @@
+name: 'Build Cleanup'
+description: 'Removes unnecessary files after a build'
+author: 'Linchpin'
+inputs:
+  working_directory:
+    description: 'The directory that contains build files/folders that should be removed'
+    required: false
+    default: './'
+  exclude_list_url:
+    description: 'URL to a txt file with a list of files/folders to be removed, one per line.'
+    required: false
+outputs:
+  success:
+    description: 'Was the cleanup successful or not?'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'trash-2'
+  color: 'red'
