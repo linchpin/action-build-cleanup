@@ -1,8 +1,6 @@
 FROM debian:9.7-slim
 
-ADD exclude-list.txt /exclude-list.txt
-
-COPY *.sh /
+COPY *.sh exclude-list.txt /
 
 RUN chmod +x /*.sh
 
