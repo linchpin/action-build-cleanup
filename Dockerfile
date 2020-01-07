@@ -5,8 +5,10 @@ RUN apt-get update \
   && apt-get install -y wget \
   && rm -rf /var/lib/apt/lists/*
 
-COPY ./exclude-list.txt /exclude-list.txt
+ADD exclude-list.txt /exclude-list.txt
+
 COPY *.sh /
+
 RUN chmod +x /*.sh
 
 ENTRYPOINT ["/entrypoint.sh"]

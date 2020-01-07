@@ -8,7 +8,7 @@ fi
 
 ls -a
 
-ITEMS=`cat ./exclude-list.txt`
+ITEMS=`cat /exclude-list.txt`
 
 # Go to the working directory (current directory by default)
 cd ${working_directory:-./}
@@ -19,4 +19,4 @@ for ITEM in $ITEMS; do
 done
 
 # Remove exclude-list file
-rm exclude-list.txt
+rm /exclude-list.txt
