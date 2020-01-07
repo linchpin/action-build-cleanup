@@ -8,7 +8,7 @@ else
 	rsync -av "$exclude_list" /exclude-list.txt
 fi
 
-ls
+ls -a
 
 ITEMS=`cat exclude-list.txt`
 
