@@ -8,7 +8,7 @@ fi
 
 ls
 
-ITEMS=`cat ./exclude-list.txt`
+ITEMS=`cat exclude-list.txt`
 
 # Go to the working directory (current directory by default)
 cd ${working_directory:-./}
