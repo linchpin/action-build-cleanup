@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Go to the working directory (current directory by default)
 cd ${working_directory:-./}
 
