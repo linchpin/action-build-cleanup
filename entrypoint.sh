@@ -1,3 +1,6 @@
+# Go to the working directory (current directory by default)
+cd ${working_directory:-./}
+
 # If a URL is passed to an exclude list, remove ours and use theirs.
 if [[ ! -z "${exclude_list_url}" ]]; then
 	rm exclude-list.txt
