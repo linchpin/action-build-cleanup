@@ -6,7 +6,7 @@ if [[ ! -z "${exclude_list_url}" ]]; then
     wget -O exclude-list.txt "${exclude_list_url}"
 fi
 
-ITEMS=`cat exclude-list.txt`
+ITEMS=`cat ./exclude-list.txt`
 
 # Go to the working directory (current directory by default)
 cd ${working_directory:-./}
