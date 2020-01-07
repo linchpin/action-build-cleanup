@@ -2,10 +2,8 @@
 
 # If a URL is passed to an exclude list, remove ours and use theirs.
 if [[ ! -z "${exclude_list_url}" ]]; then
+	rm exclude-list.txt
     wget -O exclude-list.txt "${exclude_list_url}"
-else
-	exclude_list="$GITHUB_WORKSPACE/.github/exclude-list.txt"
-	rsync -av "$exclude_list" /exclude-list.txt
 fi
 
 ls -a
